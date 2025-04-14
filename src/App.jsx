@@ -10,11 +10,10 @@ function App() {
   const getUserData = (data) => {
     setUserFormData(data)
   }
-  
 
   return (
     <>
-      <UserForm getData={() => getUserData(data)}/>
+      <UserForm getData={getUserData}/>
       <Display userData={userFormData}/>
     </>
   )

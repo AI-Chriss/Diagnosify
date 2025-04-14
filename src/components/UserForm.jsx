@@ -4,18 +4,19 @@ import { useState } from 'react'
 function UserForm({getData}) {
   const [userData, setUserData] = useState({})
 
-  function getUserData(formData) {
+  function handleSubmit(e) {
+    e.preventDefault()
+    const formData = new FormData(e.target)
     const data = Object.fromEntries(formData)
     setUserData(data)
+    getData(data)
   }
-
-  console.log(userData)
 
   return (
     <>
       <section style={styles}>
         <h1>Signup form</h1>
-        <form action={getUserData}>
+        <form onSubmit={handleSubmit}>
 
           <label htmlFor="email">Email:</label>
           <input id="email" defaultValue="joe@schmoe.com" type="email" name="email" placeholder="joe@schmoe.com" />
