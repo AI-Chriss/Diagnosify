@@ -1,5 +1,16 @@
-run = "cowsay Configure me!"
-entrypoint = "README.md"
+run = "npm run dev"
+modules = ["nodejs-20"]
 
 [nix]
 channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm run dev"]
+
+[workflows]
+runButton = "react app run"
+
+[[ports]]
+localPort = 5174
+externalPort = 80
+exposeLocalhost = true
