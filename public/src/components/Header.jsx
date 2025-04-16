@@ -1,15 +1,12 @@
+
 import styles from './styles/Header.module.css';
 
 function Header() {
-
   return (
-    <>
-      <header style={styles}>
-        <h1>Diagnosify</h1>
-        <a href="">Home</a>
-      </header>
-    </>
-  )
+    <header>
+      <h1>My App</h1>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
