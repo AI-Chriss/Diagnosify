@@ -11,6 +11,6 @@ run = ["sh", "-c", "npm run dev"]
 runButton = "react app run"
 
 [[ports]]
-localPort = 5174
+localPort = 5173
 externalPort = 80
 exposeLocalhost = true
