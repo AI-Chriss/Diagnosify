@@ -11,22 +11,22 @@ function FeelingsForm({getFeelingsData, nextPage}) {
   return (
     <>
       <section style={styles}>
-        <h1>About you</h1>
+        <h1>How are you feeling?</h1>
         <form action={handleSubmit}>
           
           <fieldset>
-            <legend>Employment Status:</legend>
+            <legend>Do you have a fever?</legend>
             <label>
-              <input type="radio" name="employmentStatus" value="unemployed" />
-              Unemployed
+              <input type="radio" name="feverStatus" value="Yes" />
+              Yes
           </label>
             <label>
-              <input type="radio" name="employmentStatus" value="part-time" />
-              Part-time
+              <input type="radio" name="feverStatus" value="No" />
+              No
           </label>
             <label>
-              <input type="radio" name="employmentStatus" defaultChecked={true} value="full-time" />
-              Full-time
+              <input type="radio" name="feverStatus" defaultChecked={true} value="full-time" />
+              I don't know
           </label>
           </fieldset>
 
@@ -35,11 +35,6 @@ function FeelingsForm({getFeelingsData, nextPage}) {
             <option value="" disabled>-- Choose a color --</option>
             <option value="red">Red</option>
             <option value="orange">Orange</option>
-            <option value="yellow">Yellow</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="indigo">Indigo</option>
-            <option value="violet">Violet</option>
           </select>
 
           <button>Submit</button>

@@ -6,7 +6,7 @@ function Header() {
     <>
       <header style={styles}>
         <h1>Diagnosify</h1>
-        <a href="">Home</a>
+        <a href="/">Home</a>
       </header>
     </>
   )
